@@ -46,11 +46,8 @@ twitch_miner = TwitchChannelPointsMiner(
             BET_wiN=Fore.MAGENTA                # Color allowed are: [BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET].
         ),
         discord=Discord(
-             webhook_api="https://discord.com/api/webhooks/1186392588081709159/59rVrJizuXctd-g3Q-mfpVszH7D7BDrG9IoKnf4Va949thQLfKtl8pRLwdam1HwgKBQv",  # Discord Webhook URL
-            events=[Events.STREAMER_ONLINE, Events.STREAMER_OFFLINE, Events.BET_LOSE, Events.BET_GENERAL, Events.BET_FAILED, Events.BET_FILTERS,
-                    Events.BET_REFUND, Events.BET_START, Events.BET_WIN, Events.BONUS_CLAIM, Events.CHAT_MENTION, Events.GAIN_FOR_RAID, 
-                    Events.DROP_CLAIM, Events.DROP_STATUS, Events.GAIN_FOR_CLAIM, Events.GAIN_FOR_WATCH, Events.GAIN_FOR_WATCH_STREAK, 
-                    Events.JOIN_RAID, Events.MOMENT_CLAIM],                                                                                            # Only these events will be sent to the chat
+             webhook_api="https://discord.com/api/webhooks/1207661252210331691/m6Ui4ZHI-h1dOlk-E-oPXqZb5WDiYyZPA-2q-DOsA4xPFQ1lSTO1D2Li6KNZs2gXPCYU",  # Discord Webhook URL
+            events=[Events.STREAMER_ONLINE, Events.STREAMER_OFFLINE],                                                                                            # Only these events will be sent to the chat
         ),
     ),
     streamer_settings=StreamerSettings(
@@ -91,18 +88,17 @@ twitch_miner = TwitchChannelPointsMiner(
 twitch_miner.mine(
     [
       Streamer("esl_dota2", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
-#      Streamer("midbeast", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("nurok", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("qojqva", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("acie", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("areliann", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("fitzyhere", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("kalamazi", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("mendo", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART, percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("notmes", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART, percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("zigueira", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("hardeesfries2", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-#      Streamer("SirDanDeMan", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART, percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
+#      Streamer("", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("frttt", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("neazul_", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("pulgaboy", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("sliggytv", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("teuzz", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("ambush", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("averagejonas", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("dabuz", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("eiya", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+#      Streamer("rakin", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
     ],                                  # Array of streamers (order = priority)
     followers=False,                    # Automatic download the list of your followers
     followers_order=FollowersOrder.ASC  # Sort the followers list by follow date. ASC or DESC
