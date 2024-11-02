@@ -88,6 +88,8 @@ twitch_miner = TwitchChannelPointsMiner(
 twitch_miner.mine(
     [
       Streamer("esl_dota2", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+      Streamer("teamliquid", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
+      Streamer("maximum", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
 #      Streamer("", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
 #      Streamer("frttt", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
 #      Streamer("neazul_", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
