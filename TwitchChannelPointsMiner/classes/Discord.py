@@ -18,7 +18,7 @@ class Discord(object):
                 url=self.webhook_api,
                 data={
                     "content": dedent(message),
-                    "username": "Twitch Channel Points Miner",
-                    "avatar_url": "https://i.imgur.com/X9fEkhT.png",
+                    "username": "TL",
+                    "avatar_url": "https://www.sponsoo.com/uploads/profile-images/logo/team-liquid-766a5958482d81bac6385ec44f745e8c.png",
                 },
             )
