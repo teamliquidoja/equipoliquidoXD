@@ -88,8 +88,6 @@ twitch_miner = TwitchChannelPointsMiner(
 twitch_miner.mine(
     [
       Streamer("teamliquid", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
-      Streamer("sliggy", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
-      Streamer("harmii", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
       Streamer("areliann", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
       Streamer("karagii", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
       Streamer("maximum", settings=StreamerSettings(follow_raid=True , claim_drops=True  , watch_streak=True)),
